@@ -1,0 +1,18 @@
+
+*{
+    text-align: center;
+}
+span{
+    background-color: red;
+    display: inline-block;
+    margin: 10px 0px ;
+    padding: 5px;
+    color: #fff;
+}
+.available span{
+    background-color: green;
+}
+.nearby span::after{
+    content: "nearby";
+    padding: 5px;
+}

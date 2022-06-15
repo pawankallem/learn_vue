@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue basics</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h1>{{ greet ( "Morning " )}}</h1>
+        <h3> {{ proficiency() }} </h3>
+        <p> {{ organization("Possible works and Catalog ") }} </p>
+        <a v-bind:href = "website" > Lykkebooks website </a>
+        <p v-html = "websiteTag" ></p>
+      </div>
+      <div>
+        <h1> Event </h1>
+        <div id="event" @mousemove="co_ordinates_XY">
+           <span>{{x}}</span> : <span>{{y}}</span>
+        </div>
+      </div>
+      <div>
+        <h1> Counter </h1>
+        <div>
+          <h2> {{count}} </h2>
+          <button @click = "add(1)">Inc count</button>
+          <button @click = "sub(1)">Dec count</button>
+        </div>
+      </div>
+      <div>
+        <h1> 2-way data binding </h1>
+        <input type="text" v-model="user_name">
+        <input type="text" v-model="user_age">
+        <h1>
+           Name :  {{user_name}}
+           <br>
+           Age : {{user_age}}
+        </h1>
+      </div>
+      <div>
+        <h1> Computed Properties </h1>
+        <div>
+          <button @click="a++"> Add A </button>
+          <button @click="b++"> Add B</button>
+          <h2> {{ a }} : {{ b }} </h2>
+          <p> Add to A = {{ addToA }} </p>
+          <p> Add to B = {{ addToB }} </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+  </body>
+  <script src="app.js"></script>
+</html>
