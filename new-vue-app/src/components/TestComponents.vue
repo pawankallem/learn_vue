@@ -11,18 +11,12 @@
 </template>
 
 <script>
+
 export default {
+    props: ['onePiece'],
+    
   data() {
-    return {
-        onePiece: [
-            {name: "Luffy", speciality: "Rubber man", show: false},
-            {name: "Zoro", speciality: "Swordsman", show: false},
-            {name: "Sanji", speciality: "Cook", show: false},
-            {name: "Nami", speciality: "Thife", show: false},
-            {name: "Robin", speciality: "Phoneglif reader", show: false},
-            {name: "Brook", speciality: "Skelton and musition", show: false},
-        ]
-    };
+    return {}
   },
 };
 </script>
