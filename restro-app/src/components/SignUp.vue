@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1> Sign Up </h1>
+    <img alt="Vue logo" src="../assets/blue-phoenix.png" />
     <form class="signupForm" action="" @submit.prevent="register">
         <input type="text" placeholder="User Name" v-model="userName" />
         <input type="text" placeholder="Email" v-model="email" />
@@ -12,7 +13,7 @@
 
 <script>
 export default {
-
+    name: "SignUp",
     data() {
         return {
             userName: "",
