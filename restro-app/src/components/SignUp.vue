@@ -2,7 +2,7 @@
   <div>
     <h1> Sign Up </h1>
     <img alt="Vue logo" src="../assets/blue-phoenix.png" />
-    <form class="signupForm" action="" @submit.prevent="register">
+    <form class="signupForm" action="" @submit.prevent="signup">
         <input type="text" placeholder="User Name" v-model="userName" />
         <input type="text" placeholder="Email" v-model="email" />
         <input type="text" placeholder="Password" v-model="password" />
@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import axios from "axios"
+
 export default {
     name: "SignUp",
     data() {
@@ -22,8 +24,18 @@ export default {
         }
     },
     methods: {
-        register: function () {
-            console.log( this.userName,this.email,this.password )
+        async signup () {
+            // console.log( this.userName,this.email,this.password )
+            let result = await axios.post("http://localhost:3000/users",{
+                email: this.email,
+                password: this.password,
+                userName: this.userName
+            })
+            if( result.status == 201 ) {
+                localStorage.setItem( "users" ,JSON.stringify( result.data ));
+                alert( "user singned up ");
+                this.$router.push({name:"SignIn"})
+            }
         }
     }
 
