@@ -35,10 +35,14 @@ export default {
                 userName: this.userName
             })
             if( result.status == 201 ) {
-                localStorage.setItem( "users" ,JSON.stringify( result.data ));
-                alert( "user singned up ");
                 this.$router.push({name:"SignIn"})
             }
+        }
+    },
+    mounted() {
+        let user = localStorage.getItem( "user" );
+        if( user ) {
+            this.$router.push({ name: "HomePage" });
         }
     }
 

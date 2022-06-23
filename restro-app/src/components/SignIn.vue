@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "SignIn",
   data() {
@@ -23,32 +24,44 @@ export default {
     };
   },
   methods: {
-    signin: function () {
-      console.log( this.email, this.password );
+    signin: async function () {
+      let result = await axios.get(
+        `http://localhost:3000/users?email=${this.email}&password=${this.password}`
+      );
+      if (result.status == 200 && result.data.length > 0) {
+        localStorage.setItem("user", JSON.stringify(result.data));
+        this.$router.push({name:"HomePage"});
+      }
+    },
+  },
+  mounted() {
+    let user = localStorage.getItem("user");
+    if( user ) {
+      this.$router.push({ name: "HomePage" })
     }
+
   }
 };
 </script>
 
 <style scoped>
-.signin-form{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin: auto;
-    gap: 5px;
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+  gap: 5px;
 }
-input{
-    height: 40px;
-    text-align: center;
-    border: 1px solid skyblue;
-    border-radius: 10px;
+input {
+  height: 40px;
+  text-align: center;
+  border: 1px solid skyblue;
+  border-radius: 10px;
 }
-.submit{
-    background: skyblue;
-    color: white;
-    font-size: 120%;
-    border-radius: 2px;
+.submit {
+  background: skyblue;
+  color: white;
+  font-size: 120%;
+  border-radius: 2px;
 }
-
 </style>
