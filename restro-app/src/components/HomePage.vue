@@ -1,14 +1,20 @@
 <template>
   <div>
+    <app-header/>
     <h1> Home Page </h1>
     <button class="submit" @click="logout"> Logout </button>
   </div>
 </template>
 
 <script>
+import NavHeader from "./NavHeader.vue"
+
 export default {
     data() {
 
+    },
+    components: {
+      "app-header":NavHeader,
     },
     methods: {
       logout: function () {
