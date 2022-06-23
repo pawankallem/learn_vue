@@ -1,15 +1,21 @@
 <template>
   <header>
-    <router-link to="#"> Home </router-link>
-    <router-link to="#"> Add Item </router-link>
-    <router-link to="#"> Updata Item </router-link>
-    <router-link to="#"> Logout </router-link>
+    <router-link to="/"> Home </router-link>
+    <router-link to="/add"> Add Item </router-link>
+    <router-link to="/update"> Update Item </router-link>
+    <router-link @click="logout" to="#"> Logout </router-link>
   </header>
 </template>
 
 <script>
 export default {
   data() {},
+  methods: {
+    logout: function () {
+      localStorage.removeItem("user");
+      this.$router.push({ name: "SignIn" });
+    },
+  },
 };
 </script>
 
