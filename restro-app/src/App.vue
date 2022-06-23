@@ -30,4 +30,25 @@ body{
 img{
   width: 200px;
 }
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 5px;
+    margin: auto;
+}
+input {
+    height: 40px;
+    text-align: center;
+    border: 1px solid skyblue;
+    border-radius: 10px;
+    font-size: 100%;
+}
+.submit {
+    background: skyblue;
+    color: #fff;
+    font-size: 120%;
+    border-radius: 2px;
+    cursor: pointer;
+}
 </style>

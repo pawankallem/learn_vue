@@ -2,7 +2,7 @@
   <div>
       <img alt="Vue logo" src="../assets/blue-phoenix.png" />
     <h1> Sign Up </h1>
-    <form class="signupForm" action="" @submit.prevent="signup">
+    <form class="form" action="" @submit.prevent="signup">
         <input type="text" placeholder="User Name" v-model="userName" />
         <input type="text" placeholder="Email" v-model="email" />
         <input type="text" placeholder="Password" v-model="password" />
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style scoped>
-.signupForm {
+/* .signupForm {
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -68,6 +68,6 @@ input {
     color: #fff;
     font-size: 120%;
     border-radius: 2px;
-}
+} */
 
 </style>
