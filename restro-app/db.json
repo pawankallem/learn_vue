@@ -59,6 +59,18 @@
       "password": "ppp",
       "userName": "p",
       "id": 10
+    },
+    {
+      "email": "k@k.com",
+      "password": "",
+      "userName": "k",
+      "id": 11
+    },
+    {
+      "email": "k@k.com",
+      "password": "kkk",
+      "userName": "k",
+      "id": 12
     }
   ],
   "restarents": [
@@ -69,16 +81,16 @@
       "id": 1
     },
     {
-      "name": "Nikhil and co",
-      "address": "Mindspace",
-      "contact": "948570940",
-      "id": 5
-    },
-    {
       "name": "Free fire daba",
       "address": "near to JBS",
       "contact": "111111",
       "id": 7
+    },
+    {
+      "name": "Srinivasa kitchen",
+      "address": "Kokapet",
+      "contact": "023490",
+      "id": 8
     }
   ]
 }
