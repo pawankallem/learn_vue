@@ -9,7 +9,7 @@
         <input class="submit" type="submit">
     </form>
     <p>
-        <router-link to="/signin"> Signin </router-link>
+        <router-link to="/signin"> Signin </router-link>// this is used for navigation to other pages
     </p>
   </div>
 </template>
