@@ -14,6 +14,10 @@ export default createStore({
       {
         id: 3,
         title: "todo 3"
+      },
+      {
+        id: 4,
+        title: "todo 4"
       }
     ]
   },
