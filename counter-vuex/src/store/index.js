@@ -19,20 +19,26 @@ export default createStore({
         id: 4,
         title: "todo 4"
       }
-    ]
+    ],
+    count: 0,
   },
   getters: {
     allTodos: (state) => state.todos,
   },
   mutations: {
     add_todo (state, todo) {
-      state.todos.push( todo ),
-      console.log( state.todos )
+      state.todos.push( todo )
+    },
+    delete_todo (state, id) {
+      state.todos = state.todos.filter( (todo) => todo.id != id )
     }
   },
   actions: {
     addTodo ({commit}, todo ) {
       commit( "add_todo", todo)
+    },
+    deleteTodo ( {commit}, id) {
+      commit( "delete_todo", id);
     }
   },
   modules: {
