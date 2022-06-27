@@ -44,6 +44,7 @@ export default {
         this.edit = !this.edit
         if ( !this.edit && todo.title != this.editedText ) {
           console.log ( todo.title , this.editedText )
+          this.updateTodo( this.editedText );
         }
       }
     }
