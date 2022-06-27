@@ -3,9 +3,9 @@
       <img alt="Vue logo" src="../assets/blue-phoenix.png" />
     <h1> Sign Up </h1>
     <form class="form" action="" @submit.prevent="signup">
-        <input type="text" placeholder="User Name" v-model="userName" />
-        <input type="text" placeholder="Email" v-model="email" />
-        <input type="text" placeholder="Password" v-model="password" />
+        <input type="text" placeholder="User Name" v-model="userName" required />
+        <input type="text" placeholder="Email" v-model="email" required/>
+        <input type="text" placeholder="Password" v-model="password" required/>
         <input class="submit" type="submit">
     </form>
     <p>

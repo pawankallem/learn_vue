@@ -53,6 +53,30 @@
       "password": "aaa",
       "userName": "pavan",
       "id": 9
+    },
+    {
+      "email": "p@p.com",
+      "password": "ppp",
+      "userName": "p",
+      "id": 10
+    },
+    {
+      "email": "k@k.com",
+      "password": "",
+      "userName": "k",
+      "id": 11
+    },
+    {
+      "email": "k@k.com",
+      "password": "kkk",
+      "userName": "k",
+      "id": 12
+    },
+    {
+      "email": "v@v.com",
+      "password": "vvv",
+      "userName": "v ",
+      "id": 13
     }
   ],
   "restarents": [
@@ -63,28 +87,16 @@
       "id": 1
     },
     {
-      "name": "Pizza",
-      "address": "gachibowly",
-      "contact": "9384790",
-      "id": 2
+      "name": "Free fire daba",
+      "address": "near to JBS",
+      "contact": "111111",
+      "id": 7
     },
     {
-      "name": "Bhavarchi",
-      "address": "Hitex",
-      "contact": "9842570",
-      "id": 3
-    },
-    {
-      "name": "Burger",
-      "address": "JBS",
-      "contact": "3245708",
-      "id": 4
-    },
-    {
-      "name": "Tempo",
-      "address": "Mindspace",
-      "contact": "948570940",
-      "id": 5
+      "name": "Srinivasa kitchen",
+      "address": "Kokapet",
+      "contact": "023490",
+      "id": 8
     }
   ]
 }

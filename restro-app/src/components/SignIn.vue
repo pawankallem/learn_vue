@@ -3,8 +3,8 @@
     <img alt="Vue logo" src="../assets/blue-phoenix.png" />
     <h1>Sign In</h1>
     <form class="form" action="" @submit.prevent="signin">
-      <input type="text" placeholder="Email" v-model="email" />
-      <input type="text" placeholder="Password" v-model="password" />
+      <input type="text" placeholder="Email" v-model="email" required/>
+      <input type="text" placeholder="Password" v-model="password" required/>
       <input class="submit" type="submit" />
     </form>
     <p>
@@ -31,6 +31,8 @@ export default {
       if (result.status == 200 && result.data.length > 0) {
         localStorage.setItem("user", JSON.stringify(result.data));
         this.$router.push({name:"HomePage"});
+      }else{
+        alert("Check your Email and Password!")
       }
     },
   },
