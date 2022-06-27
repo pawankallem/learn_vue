@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 > Todo List </h1>
-    <table>
+    <table style="margin:auto">
       <thead>
         <tr>
           <th> S.no </th>
@@ -15,7 +15,8 @@
         <tr v-for="todo in allTodos" :key="todo.id" >
             <td>{{todo.id}}</td>
             <td> {{todo.title}} </td>
-            <td> Edit </td>
+            <td v-show="edit"> <input type="text" v-bind:value="editedText"></td>
+            <td @click="changeTitle (todo)"> {{ edit ? "Update" : "Edit"}} </td>
             <td @click="deleteTodo(todo.id)"> Delete </td>
         </tr>
       </tbody>
@@ -29,6 +30,8 @@ export default {
     data () {
       return {
         todoData: [],
+        editedText: "",
+        edit: false,
       }
     },
     computed: {
@@ -36,7 +39,13 @@ export default {
       
     },
     methods: {
-      ...mapActions([ 'deleteTodo' ])
+      ...mapActions([ 'deleteTodo', 'updateTodo' ]),
+      changeTitle ( todo ) {
+        this.edit = !this.edit
+        if ( !this.edit && todo.title != this.editedText ) {
+          console.log ( todo.title , this.editedText )
+        }
+      }
     }
 }
 </script>
