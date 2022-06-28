@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> Counter app using Vuex </h1>
+    <h1> Todo's app using VUEX </h1>
     <TodoInput/>
     <TodoList/>
   </div>

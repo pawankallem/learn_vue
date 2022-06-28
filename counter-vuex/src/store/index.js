@@ -14,10 +14,6 @@ export default createStore({
       {
         id: 3,
         title: "todo 3"
-      },
-      {
-        id: 4,
-        title: "todo 4"
       }
     ],
     count: 0,
@@ -31,7 +27,12 @@ export default createStore({
     },
     delete_todo (state, id) {
       state.todos = state.todos.filter( (todo) => todo.id != id )
+    },
+    update_todo (state, todo) {
+      let index = state.todos.findIndex( (t) => t.id == todo.id);
+      console.log( index , todo )
     }
+    
   },
   actions: {
     addTodo ({commit}, todo ) {
@@ -39,7 +40,11 @@ export default createStore({
     },
     deleteTodo ( {commit}, id) {
       commit( "delete_todo", id);
+    },
+    updateTodo ( {commit}, todo) {
+      commit ( 'update_todo', todo);
     }
+    
   },
   modules: {
   }
