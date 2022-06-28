@@ -15,7 +15,7 @@ export default createStore({
       if( state.count>=1 ){
         state.count -= num;
       }else {
-        alert( "You cann't Decrese Count lessthan 0 ")
+        alert( "You cann't Decrese Count lessthan --> 0 <--")
       }
     },
   },
